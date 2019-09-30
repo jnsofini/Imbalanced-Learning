@@ -1,7 +1,4 @@
-Data/
-
+raw_data/
 Ottawa_collisions/
-
 .ipynb_checkpoints/
-
 .DS_Store
