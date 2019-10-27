@@ -15,7 +15,7 @@ In real-world datasets, class imbalance is a common problem. An imbalanced datas
 ##  Project objectives
 - Understand the causes of fatal accidents on public road in Canada. For example, the vehicle model, age group,  road conditions, etc.
 
-- Build a machine learning predictive model to classify fatal or non-fatal collisions.
+- Build a machine learning predictive model to classify fatal and non-fatal collisions.
 
 
 ##  Practice skills
