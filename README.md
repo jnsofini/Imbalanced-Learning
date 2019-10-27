@@ -1,4 +1,4 @@
-# Imbalanced Learning of Motor Vehicle Collisions on Public Roads in Canada
+# Motor Vehicle Collisions on Public Roads in Canada
 
 ![Collision Image](image/photo.jpg)
 
