@@ -7,52 +7,6 @@ In real-world datasets, class imbalance is a common problem. An imbalanced datas
 
 ##  Dataset info:   [National Collision Database](https://open.canada.ca/data/en/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a)
 
-##  Attribute description:
-
-- **C_YEAR**: Year
-
-- **C_MNTH**: Month
-
-- **C_WDAY**: Day of week
-
-- **C_HOUR**: Collision hour
-
-- **C_SEV**: Collision severity (this is the class attribute we are going to predict)
-
-- **C_VEHS**: Number of vehicles involved in collision
-
-- **C_CONF**: Collision configuration
-
-- **C_RCFG**: Road way configuration
-
-- **C_WTHR**: Weather condition
-
-- **C_RSUR**: Surface condition
-
-- **C_RALN**: Road alignment
-
-- **C_TRAF**: Traffic control
-
-- **V_ID**: Vehicle sequence number
-
-- **V_TYPE**: Vehicle type
-
-- **V_YEAR**: Vehicle model year
-
-- **P_ID**: Person sequence number
-
-- **P_SEX**: Person sex
-
-- **P_AGE**: Person age
-
-- **P_PSN**: Person position
-
-- **P_ISEV**: Medical treatment required
-
-- **P_SAFE**: Safety device used
-
-- **P_USER**: Road user class
-
 ## Exploratory data analysis
 
 ![PCA image](image/pca.png)
