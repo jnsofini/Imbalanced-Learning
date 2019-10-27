@@ -1,13 +1,13 @@
-# Imbalanced learning of Motor Vehicle Collisions on Public Roads in Canada
+# Imbalanced Learning of Motor Vehicle Collisions on Public Roads in Canada
 
 ![Collision Image](image/photo.jpg)
 
 In real-world datasets, class imbalance is a common problem. An imbalanced dataset occurs when one class (called the majority, or negative class) vastly outnumbered the other (called the minority, or positive class). The class imbalance problem is manifested when the positive class is the class of interest. We have obtained a real-world datasets in transportation collisions with an inherent imbalanced class problem.
 
 
-##  Data set information:   [National Collision Database](https://open.canada.ca/data/en/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a)
+##  Dataset info:   [National Collision Database](https://open.canada.ca/data/en/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a)
 
-##  Attribute Description:
+##  Attribute description:
 
 - **C_YEAR**: Year
 
@@ -53,16 +53,18 @@ In real-world datasets, class imbalance is a common problem. An imbalanced datas
 
 - **P_USER**: Road user class
 
+## Exploratory data analysis
+
+![PCA image](image/pca.png)
+
 
 ##  Project objectives
-
 - Understand the causes of fatal accidents on public road in Canada. For example, the vehicle model, age group,  road conditions, etc.
 
-- Build a machine learning model that would predict the type of motor vehicle collision: fatal or non-fatal.
+- Build a machine learning predictive model to classify fatal or non-fatal collisions.
 
 
 ##  Practice skills
-
 In this project, we will learn the following  skills
 
 - Data cleaning
