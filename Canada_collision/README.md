@@ -1,4 +1,4 @@
-# Motor Vehicle Collisions on Public Roads in Canada (1999 - 2017)
+# Canada Motor Vehicle Collisions (1999 - 2017)
 
 ![Collision Image](image/photo.jpg)
 
