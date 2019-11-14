@@ -8,7 +8,7 @@ from sklearn.base import TransformerMixin
 
 # Model performance metrics
 from sklearn.model_selection import cross_val_score, cross_val_predict
-from sklearn.metrics import confusion_matrix, classification_report, accuracy_score, auc, recall_score
+from sklearn.metrics import confusion_matrix, classification_report, f1_score, auc, recall_score
 from sklearn.metrics import roc_curve, roc_auc_score, average_precision_score, precision_recall_curve
 
 # This is based on some nice code by 'sveitser' at http://stackoverflow.com/a/25562948
@@ -29,7 +29,7 @@ class DataFrameImputer(TransformerMixin):
 
 
 def model_selection_cv(model, n_training_samples, n_training_labels, cv_fold, scoring=None):
-    """ Model selection by cross-validation"""
+    """ Model selection by cross-validation of binary-class"""
     # Fit the training set
     model.fit(n_training_samples, n_training_labels)
 
@@ -57,6 +57,38 @@ def model_selection_cv(model, n_training_samples, n_training_labels, cv_fold, sc
     print('Classification report:\n', classification_report(
         n_training_labels, y_val_pred))
     print('****************************************************************************')
+
+
+def model_evaluation(model, n_training_samples, n_training_labels, cv_fold, scoring=None):
+    """ Model selection by cross-validation of multi-class """
+    # Fit the training set
+    model.fit(n_training_samples, n_training_labels)
+
+    # Compute accuracy on 10-fold cross validation
+    score = cross_val_score(model, n_training_samples, n_training_labels,
+                            cv=cv_fold, scoring=scoring)
+
+    # Make prediction on 10-fold cross validation
+    y_val_pred = cross_val_predict(
+        model, n_training_samples, n_training_labels, cv=cv_fold)
+
+    # Compute the accuracy of the model
+    f1 = f1_score(n_training_labels, y_val_pred, average='weighted')
+
+    # Confusion matrix
+    conf_mx = confusion_matrix(n_training_labels, y_val_pred)
+
+    # Classification report
+    class_report = classification_report(n_training_labels, y_val_pred)
+
+    print('****************************************************************************')
+    print('Cross-validation accuracy (std): %f (%f)' %
+          (score.mean(), score.std()))
+    print('f1_score:',  f1)
+    print('Confusion matrix:\n', conf_mx)
+    print('Classification report:\n', class_report)
+    print('****************************************************************************')
+
 
 # Model prediction on the test set
 
