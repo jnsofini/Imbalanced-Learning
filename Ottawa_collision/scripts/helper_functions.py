@@ -11,13 +11,16 @@ from sklearn.model_selection import cross_val_score, cross_val_predict
 from sklearn.metrics import confusion_matrix, classification_report, f1_score, auc, recall_score
 from sklearn.metrics import roc_curve, roc_auc_score, average_precision_score, precision_recall_curve
 
-# This is based on some nice code by 'sveitser' at http://stackoverflow.com/a/25562948
-
 
 class DataFrameImputer(TransformerMixin):
-    """Impute missing categorical and numerical  values (if any).
+    """
+    This is based on some nice code by 'sveitser' at http://stackoverflow.com/a/25562948
+
+    Impute missing categorical and numerical  values (if any).
     Columns of dtype object are imputed with the most frequent value in column.
-    Columns of other types (if any) are imputed with median of column"""
+    Columns of other types (if any) are imputed with median of column
+
+    """
 
     def fit(self, X, y=None):
         self.fill = pd.Series([X[c].value_counts().index[0] if X[c].dtype == np.dtype('O')
