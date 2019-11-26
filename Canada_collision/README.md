@@ -4,6 +4,9 @@
 
 In real-world datasets, class imbalance is a common problem. An imbalanced dataset occurs when one class (called the majority, or negative class) vastly outnumbered the other (called the minority, or positive class). The class imbalance problem is manifested when the positive class is the class of interest. We have obtained a real-world dataset of motor vehicle collisions with an inherent imbalanced class problem.
 
+## WebApp
+
+This project is accompanied by a web app [CollisionPredictor](https://collisionapp.herokuapp.com/)
 
 ##  Dataset info:   [National Collision Database](https://open.canada.ca/data/en/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a)
 
